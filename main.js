@@ -47,7 +47,7 @@ let myMap = {
 
   //markers for businesses
   addBusinessMarkers() {
-    for (var i = 0; i < this.businesses.length; i++) {
+    for (let i = 0; i < this.businesses.length; i++) {
       this.markers = L.marker([this.businesses[i].lat, this.businesses[i].long])
         .bindPopup(`<p>${this.businesses[i].name}</p>`)
         .addTo(this.map);
@@ -57,7 +57,7 @@ let myMap = {
 
 //use foursquare places api to get local data
 async function getFoursquare(userChoice) {
-  const options = {
+  let options = {
     method: "GET",
     headers: {
       Accept: "application/json",
